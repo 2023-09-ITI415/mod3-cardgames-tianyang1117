@@ -485,19 +485,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1fd1c156c54b248b204c8f237b7254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suitClub: {fileID: 0}
-  suitDiamond: {fileID: 0}
-  suitHeart: {fileID: 0}
-  suitSpade: {fileID: 0}
-  faceSprites: []
-  rankSprites: []
-  cardBack: {fileID: 0}
-  cardBackGold: {fileID: 0}
-  cardFront: {fileID: 0}
-  cardFrontGold: {fileID: 0}
+  suitClub: {fileID: 21300000, guid: be996a26c4795c54aa250a07056e7547, type: 3}
+  suitDiamond: {fileID: 21300000, guid: ae33d02f3506fde43b91be753bd9faac, type: 3}
+  suitHeart: {fileID: 21300000, guid: f26dc957accfde541b633c21d1917e8d, type: 3}
+  suitSpade: {fileID: 21300000, guid: f61358888be4661469181b2ff2f4ddf0, type: 3}
+  faceSprites:
+  - {fileID: 21300000, guid: ecf24e0eaab2e674293b04abb9d284e1, type: 3}
+  - {fileID: 21300000, guid: f0d44f4d778b8e94f9238cf628731a44, type: 3}
+  - {fileID: 21300000, guid: 73dc929bc6c561e469dd9c0d1b797644, type: 3}
+  - {fileID: 21300000, guid: 9dfb2952dd30b0b4fa90fe7727872773, type: 3}
+  - {fileID: 21300000, guid: d1ac4187ce261114d96eff25314e7d45, type: 3}
+  - {fileID: 21300000, guid: b11d73f93f457004da255a84407a9491, type: 3}
+  - {fileID: 21300000, guid: 015b813aa8adb9e49aa77965514caf6e, type: 3}
+  - {fileID: 21300000, guid: 178330c71c948834aad21afcfabd3510, type: 3}
+  - {fileID: 21300000, guid: 3828d5e0fec0de84d8b6abc3b2820857, type: 3}
+  - {fileID: 21300000, guid: e2d10a0251609b041a2df660b7591f50, type: 3}
+  - {fileID: 21300000, guid: 5d85344ab8b15514186bda9a86f4ea1f, type: 3}
+  - {fileID: 21300000, guid: a98cd0b6a8ce09741949c1d3bc5ea662, type: 3}
+  rankSprites:
+  - {fileID: 21300002, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300004, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300006, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300008, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300010, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300012, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300014, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300016, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300018, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300020, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300022, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300024, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300026, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300028, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300030, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  - {fileID: 21300032, guid: 3b339077dc25e2d45984edd4fd833bdd, type: 3}
+  cardBack: {fileID: 21300000, guid: 673d15aa05984a0458b215244c6bae1a, type: 3}
+  cardBackGold: {fileID: 21300000, guid: 47e99f6be32052d45bac09728859fa74, type: 3}
+  cardFront: {fileID: 21300000, guid: a2ee61fe11d103e4da4a9f10a2de6074, type: 3}
+  cardFrontGold: {fileID: 21300000, guid: 9505674634bad3647a144b7a8d009bda, type: 3}
   startFaceUp: 1
-  prefabSprite: {fileID: 0}
-  prefabCard: {fileID: 0}
+  prefabSprite: {fileID: 100000, guid: df3e77b174b0af145a2f16f133c11680, type: 3}
+  prefabCard: {fileID: 100000, guid: e5945720d5758bd4bbbecdb99e751ef6, type: 3}
   xmlr:
     xmlText: 
   cardNames: []
@@ -517,8 +545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc652f948a978d4e825214e4ffaa690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckXML2: {fileID: 0}
-  layoutGXML: {fileID: 0}
+  deckXML2: {fileID: 4900000, guid: 22af2933cdd5bdc46b7c775a62390c0f, type: 3}
+  layoutGXML: {fileID: 4900000, guid: e546f03bad28ca34f89ac2d18eb87065, type: 3}
   xOffset: 3
   yOffset: -2.5
   layoutCenter: {x: 0, y: 0, z: 0}
@@ -722,7 +750,7 @@ GameObject:
   - component: {fileID: 1434844375}
   - component: {fileID: 1434844378}
   - component: {fileID: 1434844377}
-  - component: {fileID: 1434844376}
+  - component: {fileID: 1434844379}
   m_Layer: 5
   m_Name: Scoreboard
   m_TagString: Untagged
@@ -749,22 +777,6 @@ RectTransform:
   m_AnchoredPosition: {x: 38.487732, y: 0}
   m_SizeDelta: {x: 123.0246, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1434844376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1434844374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63d08da3d4310fb42ae5d860bc1e3dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabFloatingScore: {fileID: 5474062732305292884, guid: 12982b6ac32f6ef4e85231719431124c,
-    type: 3}
-  _score: 0
-  _scoreString: 
 --- !u!114 &1434844377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,6 +819,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434844374}
   m_CullTransparentMesh: 1
+--- !u!114 &1434844379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434844374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61464633241ac1d49aab48c4c7aa89f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabFloatingScore: {fileID: 5474062732305292884, guid: 92e25cd2c9061bc4890d2770aa4bb3f0,
+    type: 3}
+  _score: 0
+  _scoreString: 
 --- !u!1 &1796691294
 GameObject:
   m_ObjectHideFlags: 0

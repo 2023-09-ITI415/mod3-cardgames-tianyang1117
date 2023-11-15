@@ -50,7 +50,7 @@ public class Prospector_G : MonoBehaviour
         {
             highScoreText = go.GetComponent<Text>();
         }
-        int highScore = ScoreManager.HIGH_SCORE;
+        int highScore = ScoreManager_G.HIGH_SCORE;
         string hScore = "High Score: " + Utils.AddCommasToNumber(highScore);
         go.GetComponent<Text>().text = hScore;
         // Set up the UI Texts that show at the end of the round
@@ -75,11 +75,11 @@ public class Prospector_G : MonoBehaviour
 
     void Start()
     {
-        Scoreboard.S.score = ScoreManager.SCORE;
+        Scoreboard_G.S.score = ScoreManager_G.SCORE;
 
         deck = GetComponent<Deck>();
         deck.InitDeck(deckXML2.text);
-        Deck.Shuffle(ref deck.cards); // This shuffles the deck by reference //
+        DeckG.Shuffle(ref deck.cards); // This shuffles the deck by reference //
 
         layout = GetComponent<Layout>(); // Get the Layout component
         layout.ReadLayout(layoutGXML.text); // Pass LayoutXML to it
@@ -266,8 +266,8 @@ public class Prospector_G : MonoBehaviour
                 MoveToDiscard(target); // Moves the target to the discardPile
                 MoveToTarget(Draw()); // Moves the next drawn card to the target
                 UpdateDrawPile(); // Restacks the drawPile
-                ScoreManager.EVENT(eScoreEvent.draw);
-                FloatingScoreHandler(eScoreEvent.draw);
+                ScoreManager_G.EVENT(eScoreEventG.draw);
+                FloatingScoreHandler(eScoreEventG.draw);
                 break;
             case eCardStateG.tableau:
                 // Clicking a card in the tableau will check if it's a valid play
@@ -288,8 +288,8 @@ public class Prospector_G : MonoBehaviour
                 tableau.Remove(cd); // Remove it from the tableau List
                 MoveToTarget(cd); // Make it the target card
                 SetTableauFaces();
-                ScoreManager.EVENT(eScoreEvent.mine);
-                FloatingScoreHandler(eScoreEvent.mine);
+                ScoreManager_G.EVENT(eScoreEventG.mine);
+                FloatingScoreHandler(eScoreEventG.mine);
 
                 break;
         }
@@ -325,7 +325,7 @@ public class Prospector_G : MonoBehaviour
 
     void GameOver(bool won)
     {
-        int score = ScoreManager.SCORE;
+        int score = ScoreManager_G.SCORE;
         if (fsRun != null) score += fsRun.score;
 
         if (won)
@@ -333,14 +333,14 @@ public class Prospector_G : MonoBehaviour
             gameOverText.text = "Round Over";
             roundResultText.text = "You won this round!\nRound Score: " + score;
             ShowResultsUI(true);
-            ScoreManager.EVENT(eScoreEvent.gameWin);
-            FloatingScoreHandler(eScoreEvent.gameWin);
+            ScoreManager_G.EVENT(eScoreEventG.gameWin);
+            FloatingScoreHandler(eScoreEventG.gameWin);
 
         }
         else
         {
             gameOverText.text = "Game Over";
-            if (ScoreManager.HIGH_SCORE <= score)
+            if (ScoreManager_G.HIGH_SCORE <= score)
             {
                 string str = "You got the high score!\nHigh score: " + score;
                 roundResultText.text = str;
@@ -350,8 +350,8 @@ public class Prospector_G : MonoBehaviour
                 roundResultText.text = "Your final score was: " + score;
             }
             ShowResultsUI(true);
-            ScoreManager.EVENT(eScoreEvent.gameLoss);
-            FloatingScoreHandler(eScoreEvent.gameLoss);
+            ScoreManager_G.EVENT(eScoreEventG.gameLoss);
+            FloatingScoreHandler(eScoreEventG.gameLoss);
         }
 
         Invoke("ReloadLevel", reloadDelay); // a
@@ -386,16 +386,16 @@ public class Prospector_G : MonoBehaviour
         return (false);
     }
 
-    void FloatingScoreHandler(eScoreEvent evt)
+    void FloatingScoreHandler(eScoreEventG evt)
     {
         List<Vector2> fsPts;
         switch (evt)
         {
             // Same things need to happen whether it's a draw, a win, or a loss
-            case eScoreEvent.draw: // Drawing a card
-            case eScoreEvent.gameWin: // Won the round
-            case eScoreEvent.gameLoss: // Lost the round
-                                       // Add fsRun to the Scoreboard score
+            case eScoreEventG.draw: // Drawing a card
+            case eScoreEventG.gameWin: // Won the round
+            case eScoreEventG.gameLoss: // Lost the round
+                                       // Add fsRun to the Scoreboard_G score
                 if (fsRun != null)
                 {
                     // Create points for the Bézier curve1
@@ -403,14 +403,14 @@ public class Prospector_G : MonoBehaviour
                     fsPts.Add(fsPosRun);
                     fsPts.Add(fsPosMid2);
                     fsPts.Add(fsPosEnd);
-                    fsRun.reportFinishTo = Scoreboard.S.gameObject;
+                    fsRun.reportFinishTo = Scoreboard_G.S.gameObject;
                     fsRun.Init(fsPts, 0, 1);
                     // Also adjust the fontSize
                     fsRun.fontSizes = new List<float>(new float[] { 28, 36, 4 });
                     fsRun = null; // Clear fsRun so it's created again
                 }
                 break;
-            case eScoreEvent.mine: // Remove a mine card
+            case eScoreEventG.mine: // Remove a mine card
                                    // Create a FloatingScore for this score
                 FloatingScore fs;
                 // Move it from the mousePosition to fsPosRun
@@ -421,7 +421,7 @@ public class Prospector_G : MonoBehaviour
                 fsPts.Add(p0);
                 fsPts.Add(fsPosMid);
                 fsPts.Add(fsPosRun);
-                fs = Scoreboard.S.CreateFloatingScore(ScoreManager.CHAIN, fsPts);
+                fs = Scoreboard_G.S.CreateFloatingScore(ScoreManager_G.CHAIN, fsPts);
                 fs.fontSizes = new List<float>(new float[] { 4, 50, 28 });
                 if (fsRun == null)
                 {
