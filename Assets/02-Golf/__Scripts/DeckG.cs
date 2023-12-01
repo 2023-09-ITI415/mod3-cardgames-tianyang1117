@@ -39,7 +39,7 @@ public class DeckG : MonoBehaviour {
 
 
 	// called by Prospector when it is ready
-	public void InitDeck(string deckXMLText2) {
+	public void InitDeck(string deckgXMLText) {
 		// from page 576
 		if( GameObject.Find("_DeckG") == null) {
 			GameObject anchorGO = new GameObject("_DeckG");
@@ -57,16 +57,16 @@ public class DeckG : MonoBehaviour {
 		
 		
 		// -------- end from page 576
-		ReadDeck (deckXMLText2);
+		ReadDeck (deckgXMLText);
 		MakeCards();
 	}
 
 
 	// ReadDeck parses the XML file passed to it into Card Definitions
-	public void ReadDeck(string deckXMLText2)
+	public void ReadDeck(string deckgXMLText)
 	{
 		xmlr = new PT_XMLReader_G ();
-		xmlr.Parse (deckXMLText2);
+		xmlr.Parse (deckgXMLText);
 
 		// print a test line
 		string s = "xml[0] decoratorg [0] ";

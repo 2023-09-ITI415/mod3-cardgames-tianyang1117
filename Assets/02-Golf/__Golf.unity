@@ -443,24 +443,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xmlr:
     xmlText: 
-  multiplier: {x: 0, y: 0}
+  multiplier: {x: 1.25, y: 1.5}
   slotDefs: []
   drawPile:
-    x: 0
-    y: 0
+    x: 6
+    y: 4
     faceUp: 0
     layerName: Default
-    layerID: 0
+    layerID: 4
     id: 0
     hiddenBy: 
     type: slot
     stagger: {x: 0, y: 0}
   discardPile:
     x: 0
-    y: 0
+    y: 1
     faceUp: 0
     layerName: Default
-    layerID: 0
+    layerID: 5
     id: 0
     hiddenBy: 
     type: slot
@@ -545,8 +545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc652f948a978d4e825214e4ffaa690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckXML2: {fileID: 4900000, guid: 22af2933cdd5bdc46b7c775a62390c0f, type: 3}
-  layoutGXML: {fileID: 4900000, guid: e546f03bad28ca34f89ac2d18eb87065, type: 3}
+  deckgXML: {fileID: 4900000, guid: 22af2933cdd5bdc46b7c775a62390c0f, type: 3}
+  layoutgXML: {fileID: 4900000, guid: e546f03bad28ca34f89ac2d18eb87065, type: 3}
   xOffset: 3
   yOffset: -2.5
   layoutCenter: {x: 0, y: 0, z: 0}

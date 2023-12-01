@@ -11,8 +11,8 @@ public class Prospector_G : MonoBehaviour
     static public Prospector_G S;
 
     [Header("Set in Inspector")]
-    public TextAsset deckXML2;
-    public TextAsset layoutGXML;
+    public TextAsset deckgXML;
+    public TextAsset layoutgXML;
     public float xOffset = 3;
     public float yOffset = -2.5f;
     public Vector3 layoutCenter;
@@ -78,11 +78,11 @@ public class Prospector_G : MonoBehaviour
         Scoreboard_G.S.score = ScoreManager_G.SCORE;
 
         deck = GetComponent<Deck>();
-        deck.InitDeck(deckXML2.text);
+        deck.InitDeck(deckgXML.text);
         DeckG.Shuffle(ref deck.cards); // This shuffles the deck by reference //
 
         layout = GetComponent<Layout>(); // Get the Layout component
-        layout.ReadLayout(layoutGXML.text); // Pass LayoutXML to it
+        layout.ReadLayout(layoutgXML.text); // Pass LayoutXML to it
 
         drawPile = ConvertListCardsToListCardGolfs(deck.cards);
         LayoutGame();
